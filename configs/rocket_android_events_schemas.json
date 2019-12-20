@@ -6161,7 +6161,6 @@
                 }, 
                 {
                     "amplitudeProperties": {
-                        "link": "extra.link", 
                         "message_id": "extra.message_id"
                     }, 
                     "description": "", 
@@ -6210,9 +6209,7 @@
                 }, 
                 {
                     "amplitudeProperties": {
-                        "link": "extra.link", 
-                        "message_id": "extra.message_id", 
-                        "primary": "extra.primary"
+                        "message_id": "extra.message_id"
                     }, 
                     "description": "", 
                     "name": " Click In-App Message", 
@@ -6343,6 +6340,103 @@
                 }, 
                 {
                     "amplitudeProperties": {
+                        "vertical": "extra.vertical"
+                    }, 
+                    "description": "", 
+                    "name": " Show Content Home Search Bar", 
+                    "schema": {
+                        "$schema": "http://json-schema.org/schema#", 
+                        "properties": {
+                            "category": {
+                                "enum": [
+                                    "action"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "method": {
+                                "enum": [
+                                    "show"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "object": {
+                                "enum": [
+                                    "search_bar"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "timestamp": {
+                                "minimum": 0, 
+                                "type": "number"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "content_home"
+                                ], 
+                                "type": "string"
+                            }
+                        }, 
+                        "required": [
+                            "category", 
+                            "timestamp", 
+                            "object", 
+                            "method", 
+                            "value"
+                        ], 
+                        "type": "object"
+                    }
+                }, 
+                {
+                    "amplitudeProperties": {
+                        "source": "extra.source", 
+                        "vertical": "extra.vertical"
+                    }, 
+                    "description": "", 
+                    "name": " Select Query Content Home", 
+                    "schema": {
+                        "$schema": "http://json-schema.org/schema#", 
+                        "properties": {
+                            "category": {
+                                "enum": [
+                                    "action"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "method": {
+                                "enum": [
+                                    "select_query"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "object": {
+                                "enum": [
+                                    "search_bar"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "timestamp": {
+                                "minimum": 0, 
+                                "type": "number"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "content_home"
+                                ], 
+                                "type": "string"
+                            }
+                        }, 
+                        "required": [
+                            "category", 
+                            "timestamp", 
+                            "object", 
+                            "method", 
+                            "value"
+                        ], 
+                        "type": "object"
+                    }
+                }, 
+                {
+                    "amplitudeProperties": {
                         "category": "extra.category", 
                         "vertical": "extra.vertical"
                     }, 
@@ -6379,6 +6473,58 @@
                             "timestamp", 
                             "object", 
                             "method"
+                        ], 
+                        "type": "object"
+                    }
+                }, 
+                {
+                    "amplitudeProperties": {
+                        "category": "extra.category", 
+                        "item_id": "extra.item_id", 
+                        "item_name": "extra.item_name", 
+                        "subcategory_id": "extra.subcategory_id", 
+                        "vertical": "extra.vertical"
+                    }, 
+                    "description": "", 
+                    "name": " Open Detail Page More", 
+                    "schema": {
+                        "$schema": "http://json-schema.org/schema#", 
+                        "properties": {
+                            "category": {
+                                "enum": [
+                                    "action"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "method": {
+                                "enum": [
+                                    "open"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "object": {
+                                "enum": [
+                                    "detail_page"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "timestamp": {
+                                "minimum": 0, 
+                                "type": "number"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "more"
+                                ], 
+                                "type": "string"
+                            }
+                        }, 
+                        "required": [
+                            "category", 
+                            "timestamp", 
+                            "object", 
+                            "method", 
+                            "value"
                         ], 
                         "type": "object"
                     }
@@ -7060,6 +7206,60 @@
                 }, 
                 {
                     "amplitudeProperties": {
+                        "action": "extra.action", 
+                        "category": "extra.category", 
+                        "item_id": "extra.item_id", 
+                        "item_name": "extra.item_name", 
+                        "subcategory_id": "extra.subcategory_id", 
+                        "version_id": "extra.version_id", 
+                        "vertical": "extra.vertical"
+                    }, 
+                    "description": "", 
+                    "name": " Change Travel Settings", 
+                    "schema": {
+                        "$schema": "http://json-schema.org/schema#", 
+                        "properties": {
+                            "category": {
+                                "enum": [
+                                    "action"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "method": {
+                                "enum": [
+                                    "change"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "object": {
+                                "enum": [
+                                    "setting"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "timestamp": {
+                                "minimum": 0, 
+                                "type": "number"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "detail_page"
+                                ], 
+                                "type": "string"
+                            }
+                        }, 
+                        "required": [
+                            "category", 
+                            "timestamp", 
+                            "object", 
+                            "method", 
+                            "value"
+                        ], 
+                        "type": "object"
+                    }
+                }, 
+                {
+                    "amplitudeProperties": {
                         "position": "extra.position", 
                         "source": "extra.source"
                     }, 
@@ -7602,10 +7802,12 @@
                 {
                     "amplitudeProperties": {
                         "category": "extra.category", 
-                        "item_name": "extra.item_name"
+                        "item_id": "extra.item_id", 
+                        "item_name": "extra.item_name", 
+                        "vertical": "extra.vertical"
                     }, 
                     "description": "", 
-                    "name": " Click Item Content Home", 
+                    "name": " Click Content Home Item", 
                     "schema": {
                         "$schema": "http://json-schema.org/schema#", 
                         "properties": {
@@ -7814,6 +8016,151 @@
                             "object": {
                                 "enum": [
                                     "app"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "timestamp": {
+                                "minimum": 0, 
+                                "type": "number"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "game_shortcut"
+                                ], 
+                                "type": "string"
+                            }
+                        }, 
+                        "required": [
+                            "category", 
+                            "timestamp", 
+                            "object", 
+                            "method", 
+                            "value"
+                        ], 
+                        "type": "object"
+                    }
+                }, 
+                {
+                    "amplitudeProperties": {
+                        "challenge_name": "extra.challenge_name"
+                    }, 
+                    "description": "", 
+                    "name": " Show Update Message", 
+                    "schema": {
+                        "$schema": "http://json-schema.org/schema#", 
+                        "properties": {
+                            "category": {
+                                "enum": [
+                                    "action"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "method": {
+                                "enum": [
+                                    "show"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "object": {
+                                "enum": [
+                                    "message"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "timestamp": {
+                                "minimum": 0, 
+                                "type": "number"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "update"
+                                ], 
+                                "type": "string"
+                            }
+                        }, 
+                        "required": [
+                            "category", 
+                            "timestamp", 
+                            "object", 
+                            "method", 
+                            "value"
+                        ], 
+                        "type": "object"
+                    }
+                }, 
+                {
+                    "amplitudeProperties": {
+                        "action": "extra.action", 
+                        "challenge_name": "extra.challenge_name"
+                    }, 
+                    "description": "", 
+                    "name": " Click Update Message", 
+                    "schema": {
+                        "$schema": "http://json-schema.org/schema#", 
+                        "properties": {
+                            "category": {
+                                "enum": [
+                                    "action"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "method": {
+                                "enum": [
+                                    "click"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "object": {
+                                "enum": [
+                                    "message"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "timestamp": {
+                                "minimum": 0, 
+                                "type": "number"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "update"
+                                ], 
+                                "type": "string"
+                            }
+                        }, 
+                        "required": [
+                            "category", 
+                            "timestamp", 
+                            "object", 
+                            "method", 
+                            "value"
+                        ], 
+                        "type": "object"
+                    }
+                }, 
+                {
+                    "amplitudeProperties": {
+                        "action": "extra.action"
+                    }, 
+                    "description": "", 
+                    "name": " Show Game Shortcut Contextual Hint", 
+                    "schema": {
+                        "$schema": "http://json-schema.org/schema#", 
+                        "properties": {
+                            "category": {
+                                "enum": [
+                                    "action"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "method": {
+                                "enum": [
+                                    "show"
+                                ], 
+                                "type": "string"
+                            }, 
+                            "object": {
+                                "enum": [
+                                    "contextual_hint"
                                 ], 
                                 "type": "string"
                             }, 
